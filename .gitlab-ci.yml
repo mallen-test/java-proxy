@@ -1,0 +1,17 @@
+release-build:
+    script:
+     - mvn clean deploy -Dmaven.test.skip=true
+    only:
+     - master
+
+snapshot-build:
+    script:
+     - mvn clean deploy -Dmaven.test.skip=true
+    only:
+     - /^release.*/
+
+hotfix-build:
+    script:
+     - mvn clean deploy -Dmaven.test.skip=true
+    only:
+     - /^hotfix.*/
