@@ -25,5 +25,11 @@ public class PersonService {
         return name.length();
     }
 
+    public String getName() {
+        return name;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
 }

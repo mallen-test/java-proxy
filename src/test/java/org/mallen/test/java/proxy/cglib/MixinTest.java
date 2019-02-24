@@ -20,5 +20,8 @@ public class MixinTest {
         MixinInterface mixinInterface = (MixinInterface) mixin;
         Assert.assertEquals("first behaviour", mixinInterface.first());
         Assert.assertEquals("second behaviour", mixinInterface.second());
+
+        Assert.assertEquals("first behaviour", ((Interface1)mixin).first());
+        Assert.assertEquals("second behaviour", ((Interface2)mixin).second());
     }
 }

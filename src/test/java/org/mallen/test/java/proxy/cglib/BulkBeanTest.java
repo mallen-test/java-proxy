@@ -22,5 +22,11 @@ public class BulkBeanTest {
         assertEquals("mallen", values[0]);
         assertEquals(18, values[1]);
         assertEquals("chengdu", values[2]);
+        // 设置属性
+        bulkBean.setPropertyValues(bean, new Object[]{"mallen1", 19, "chengdu1"});
+        values = bulkBean.getPropertyValues(bean);
+        assertEquals("mallen1", values[0]);
+        assertEquals(19, values[1]);
+        assertEquals("chengdu1", values[2]);
     }
 }
